@@ -1,9 +1,12 @@
 :root {
   --scroll-progress: 0;
   --wall-rise: 0vh;
-  --climber-opacity: 0;
-  --climber-scale: 0.94;
-  --climber-y: 0vh;
+  --climber-one-opacity: 0;
+  --climber-one-scale: 0.94;
+  --climber-one-y: 0vh;
+  --climber-two-opacity: 0;
+  --climber-two-scale: 0.94;
+  --climber-two-y: 0vh;
   --copy-one-opacity: 0;
   --copy-one-x: 56px;
   --copy-two-opacity: 0;
@@ -59,10 +62,10 @@ body {
 
 .wall {
   position: absolute;
-  inset: -18vh auto auto 0;
+  inset: -84vh auto auto 0;
   z-index: 1;
   width: min(58vw, 760px);
-  height: 142vh;
+  height: 230vh;
   transform: translate3d(0, var(--wall-rise), 0);
   transform-origin: left center;
   will-change: transform;
@@ -264,12 +267,31 @@ body {
   --torso-start: #c84b40;
   --torso-end: #7f3040;
   --pack-color: #334b59;
-  opacity: var(--climber-opacity);
-  transform: translate3d(-50%, calc(-50% + var(--climber-y)), 0) scale(var(--climber-scale));
+  --active-opacity: 0;
+  --active-scale: 0.94;
+  --active-y: 0vh;
+  opacity: var(--active-opacity);
+  transform: translate3d(-50%, calc(-50% + var(--active-y)), 0) scale(var(--active-scale));
   transform-origin: center;
   filter: drop-shadow(0 18px 24px rgba(40, 28, 18, 0.22));
   transition: opacity 80ms linear;
   will-change: opacity, transform;
+}
+
+.climber-one {
+  --active-opacity: var(--climber-one-opacity);
+  --active-scale: var(--climber-one-scale);
+  --active-y: var(--climber-one-y);
+}
+
+.climber-two {
+  --active-opacity: var(--climber-two-opacity);
+  --active-scale: var(--climber-two-scale);
+  --active-y: var(--climber-two-y);
+  --helmet-color: #61b9a7;
+  --torso-start: #2f6c9a;
+  --torso-end: #26394f;
+  --pack-color: #bd6d3e;
 }
 
 .climber > * {
@@ -283,7 +305,7 @@ body {
   height: 132vh;
   border-radius: 999px;
   background: linear-gradient(180deg, #c75c37, #e7aa55 54%, #c75c37);
-  opacity: var(--climber-opacity);
+  opacity: var(--active-opacity);
 }
 
 .head {
@@ -313,7 +335,7 @@ body {
   height: 22%;
   border-radius: 46% 54% 54% 46%;
   background: var(--pack-color);
-  opacity: var(--climber-opacity);
+  opacity: var(--active-opacity);
   transform: rotate(12deg);
 }
 
@@ -383,7 +405,7 @@ body {
   border-radius: 40% 40% 54% 54%;
   background: #eef0e6;
   border: 3px solid #4c5f61;
-  opacity: var(--climber-opacity);
+  opacity: var(--active-opacity);
 }
 
 .story-copy {
@@ -469,7 +491,7 @@ body {
 
   .wall {
     width: 86vw;
-    height: 136vh;
+    height: 224vh;
   }
 
   .climber {
