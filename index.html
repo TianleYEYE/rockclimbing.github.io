@@ -3,69 +3,153 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rock Climbing Scroll</title>
+    <title>CLIMB COMPANY | 给城市人的垂直游乐场</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="climb-page" aria-label="攀岩滚动展示">
-      <section class="climb-stage" aria-label="滚动攀岩场景">
-        <div class="sky-haze" aria-hidden="true"></div>
+    <main class="climb-page" aria-label="CLIMB COMPANY 品牌展示">
+      <section class="scroll-story" aria-label="滚动式岩壁品牌体验">
+        <div class="climb-stage">
+          <div class="sky-haze" aria-hidden="true"></div>
 
-        <div class="wall" aria-hidden="true">
-          <div class="wall-face">
-            <span class="crack crack-a"></span>
-            <span class="crack crack-b"></span>
-            <span class="crack crack-c"></span>
-            <span class="crack crack-d"></span>
-            <span class="hold hold-1"></span>
-            <span class="hold hold-2"></span>
-            <span class="hold hold-3"></span>
-            <span class="hold hold-4"></span>
-            <span class="hold hold-5"></span>
-            <span class="hold hold-6"></span>
-            <span class="hold hold-7"></span>
-            <span class="hold hold-8"></span>
-            <span class="ledge ledge-1"></span>
-            <span class="ledge ledge-2"></span>
-            <span class="ledge ledge-3"></span>
+          <header class="site-header">
+            <a class="brand-mark" href="#" aria-label="CLIMB COMPANY 首页">
+              <span class="brand-dot"></span>
+              <span>CLIMB COMPANY</span>
+            </a>
+            <nav class="site-nav" aria-label="主要导航">
+              <a href="#routes">路线</a>
+              <a href="#vibe">社群</a>
+              <a href="#join">预约</a>
+            </nav>
+          </header>
+
+          <div class="wall" aria-hidden="true">
+            <img src="assets/rock-wall.png" alt="" />
+          </div>
+
+          <div class="climber climber-one" aria-hidden="true">
+            <div class="rope"></div>
+            <div class="head"></div>
+            <div class="torso"></div>
+            <div class="pack"></div>
+            <div class="arm arm-left"></div>
+            <div class="arm arm-right"></div>
+            <div class="leg leg-left"></div>
+            <div class="leg leg-right"></div>
+            <div class="shoe shoe-left"></div>
+            <div class="shoe shoe-right"></div>
+            <div class="chalk-bag"></div>
+          </div>
+
+          <div class="climber climber-two" aria-hidden="true">
+            <div class="rope"></div>
+            <div class="head"></div>
+            <div class="torso"></div>
+            <div class="pack"></div>
+            <div class="arm arm-left"></div>
+            <div class="arm arm-right"></div>
+            <div class="leg leg-left"></div>
+            <div class="leg leg-right"></div>
+            <div class="shoe shoe-left"></div>
+            <div class="shoe shoe-right"></div>
+            <div class="chalk-bag"></div>
+          </div>
+
+          <section class="hero-copy" aria-labelledby="brand-title">
+            <p class="eyebrow">Urban climbing club</p>
+            <h1 id="brand-title">CLIMB COMPANY</h1>
+            <p class="tagline">给城市人的垂直游乐场。</p>
+            <div class="hero-badges" aria-label="品牌标签">
+              <span>新手友好</span>
+              <span>每周新路线</span>
+              <span>下班可达</span>
+            </div>
+            <a class="hero-action" href="#routes">开始上墙</a>
+          </section>
+
+          <div class="story-copy" aria-label="品牌亮点">
+            <p class="copy-line copy-line-one">
+              新手不用假装专业，第一块岩点就会带你进入状态。
+            </p>
+            <p class="copy-line copy-line-two">
+              路线像关卡一样更新，轻松、认真、好玩都可以同时发生。
+            </p>
+            <p class="copy-line copy-line-three">
+              朋友、教练和一点点胆量，组成你的城市冒险小队。
+            </p>
+          </div>
+
+          <div class="scroll-cue" aria-hidden="true"></div>
+          <div class="route-progress" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
+      </section>
 
-        <div class="climber climber-one" aria-hidden="true">
-          <div class="rope"></div>
-          <div class="head"></div>
-          <div class="torso"></div>
-          <div class="pack"></div>
-          <div class="arm arm-left"></div>
-          <div class="arm arm-right"></div>
-          <div class="leg leg-left"></div>
-          <div class="leg leg-right"></div>
-          <div class="shoe shoe-left"></div>
-          <div class="shoe shoe-right"></div>
-          <div class="chalk-bag"></div>
+      <section class="content-band routes-band" id="routes" aria-labelledby="routes-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Pick your route</p>
+            <h2 id="routes-title">把每次训练做成一关。</h2>
+          </div>
+          <div class="route-list" aria-label="路线介绍">
+            <article class="route-item">
+              <span class="level-tag">Level 01</span>
+              <div>
+                <h3>第一次上墙</h3>
+                <p>45 分钟体验课，从穿鞋、热身到完成第一条彩色路线。</p>
+              </div>
+            </article>
+            <article class="route-item">
+              <span class="level-tag">Level 02</span>
+              <div>
+                <h3>抱石入门</h3>
+                <p>练习重心、脚法和落地保护，适合想下班来玩一小时的人。</p>
+              </div>
+            </article>
+            <article class="route-item">
+              <span class="level-tag">Level 03</span>
+              <div>
+                <h3>路线挑战日</h3>
+                <p>每周一套新线路，带一点比赛感，也带一点朋友局的松弛。</p>
+              </div>
+            </article>
+            <article class="route-item">
+              <span class="level-tag">Level 04</span>
+              <div>
+                <h3>城市先锋队</h3>
+                <p>从室内技术过渡到户外体验，给想继续往上爬的人。</p>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="climber climber-two" aria-hidden="true">
-          <div class="rope"></div>
-          <div class="head"></div>
-          <div class="torso"></div>
-          <div class="pack"></div>
-          <div class="arm arm-left"></div>
-          <div class="arm arm-right"></div>
-          <div class="leg leg-left"></div>
-          <div class="leg leg-right"></div>
-          <div class="shoe shoe-left"></div>
-          <div class="shoe shoe-right"></div>
-          <div class="chalk-bag"></div>
+      <section class="content-band vibe-band" id="vibe" aria-labelledby="vibe-title">
+        <div class="section-inner vibe-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Club vibe</p>
+            <h2 id="vibe-title">不是硬核俱乐部，是会让人想再来一次的地方。</h2>
+          </div>
+          <div class="vibe-list" aria-label="社群特点">
+            <p><strong>路线会变。</strong>每周更新抱石线路，颜色、动作和难度都有新鲜感。</p>
+            <p><strong>节奏很轻。</strong>可以认真训练，也可以把它当作朋友见面的运动场。</p>
+            <p><strong>教练在场。</strong>动作、安全和心理建设，都有人陪你一点点解锁。</p>
+          </div>
         </div>
+      </section>
 
-        <div class="story-copy" aria-label="攀岩说明">
-          <p class="copy-line copy-line-one">视角沿着岩壁缓慢上升。</p>
-          <p class="copy-line copy-line-two">攀登者先进入画面，随后贴着岩壁远离视线。</p>
-          <p class="copy-line copy-line-three">继续下滑，新的高度会展开下一段路线。</p>
+      <section class="content-band join-band" id="join" aria-labelledby="join-title">
+        <div class="section-inner join-panel">
+          <p class="eyebrow">Ready?</p>
+          <h2 id="join-title">今晚不绕路，直接上墙。</h2>
+          <p>预约一次新手体验，带走一张完成路线的小徽章。</p>
+          <a class="join-action" href="mailto:hello@climb.company">预约体验</a>
         </div>
-
-        <div class="scroll-cue" aria-hidden="true"></div>
       </section>
     </main>
 

@@ -9,8 +9,9 @@ function easedPresence(progress, start, visible, end) {
 }
 
 function updateScrollProgress() {
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = clamp(scrollable > 0 ? window.scrollY / scrollable : 0);
+  const story = document.querySelector(".scroll-story");
+  const storyScrollable = story ? story.offsetHeight - window.innerHeight : 0;
+  const progress = clamp(storyScrollable > 0 ? window.scrollY / storyScrollable : 0);
   const wallMove = progress * 76;
 
   const revealEnd = 0.3;
@@ -27,6 +28,7 @@ function updateScrollProgress() {
   const copyOne = easedPresence(progress, 0.12, 0.24, 0.42);
   const copyTwo = easedPresence(progress, 0.34, 0.48, 0.68);
   const copyThree = easedPresence(progress, 0.58, 0.72, 0.94);
+  const heroPresence = clamp((0.24 - progress) / 0.16);
 
   root.style.setProperty("--scroll-progress", progress.toFixed(4));
   root.style.setProperty("--wall-rise", `${wallMove.toFixed(2)}vh`);
@@ -42,6 +44,8 @@ function updateScrollProgress() {
   root.style.setProperty("--copy-two-x", `${((1 - copyTwo) * 56).toFixed(1)}px`);
   root.style.setProperty("--copy-three-opacity", copyThree.toFixed(4));
   root.style.setProperty("--copy-three-x", `${((1 - copyThree) * 56).toFixed(1)}px`);
+  root.style.setProperty("--hero-opacity", heroPresence.toFixed(4));
+  root.style.setProperty("--hero-y", `${((1 - heroPresence) * -24).toFixed(1)}px`);
 }
 
 updateScrollProgress();
